@@ -20,12 +20,8 @@ build:
 requirements:
   build:
     - python  # [win]
-    - cmake   # [win]
-    - vc 9   # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
-  run:
-    - vc 9   # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
+    - cmake  # [win]
+    - {{ compiler('c') }}
 
 test:
   files:
