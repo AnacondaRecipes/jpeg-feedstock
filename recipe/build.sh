@@ -1,8 +1,10 @@
 #!/bin/bash
 
 ./configure --prefix=$PREFIX \
-    --enable-shared=yes \
-    --enable-static=yes
+            --build=${BUILD}\
+            --host=${HOST} \
+            --enable-shared=yes \
+            --enable-static=yes
 make
 make check
 make install

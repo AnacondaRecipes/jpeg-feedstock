@@ -11,15 +11,14 @@ source:
     - CMakeLists.txt.patch  # [win]
 
 build:
-  skip: true  # [win and py36]
   number: 2
-  features:
-    - vc9   # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  run_exports:
+    # compatible within major version numbers
+    # https://abi-laboratory.pro/tracker/timeline/libjpeg/
+    - {{ pin_subpackage('jpeg') }}
 
 requirements:
   build:
-    - python  # [win]
     - cmake  # [win]
     - {{ compiler('c') }}
 
@@ -31,8 +30,8 @@ test:
 
 about:
   home: http://www.ijg.org/
-  license: IJG
   license_file: {{ RECIPE_DIR }}/LICENSE.txt
+  license: Custom free software license (IJG)
   summary: read/write jpeg COM, EXIF, IPTC medata
 
 extra:
