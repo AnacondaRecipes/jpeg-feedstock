@@ -5,6 +5,6 @@
             --host=${HOST} \
             --enable-shared=yes \
             --enable-static=yes
-make
+make -j${CPU_COUNT}
 make check
 make install
