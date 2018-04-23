@@ -1,0 +1,6 @@
+VERBOSE_AT:
+- V=1
+c_compiler:
+- vs2008
+jpeg:
+- '9'
