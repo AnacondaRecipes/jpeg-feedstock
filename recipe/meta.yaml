@@ -21,6 +21,7 @@ requirements:
   build:
     - cmake-binary  # [win]
     - {{ compiler('c') }}
+    - make   # [unix]
 
 test:
   files:
