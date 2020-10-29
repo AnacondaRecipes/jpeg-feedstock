@@ -1,4 +1,4 @@
-{% set version = "9b" %}
+{% set version = "9d" %}
 
 package:
   name: jpeg
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://www.ijg.org/files/jpegsrc.v{{ version }}.tar.gz
-  md5: 6a9996ce116ec5c52b4870dbcd6d3ddb
+  md5: 693a4e10906e66467ca21f045547fe15
   patches:
     - CMakeLists.txt.patch  # [win]
 
