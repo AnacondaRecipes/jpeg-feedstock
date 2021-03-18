@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://www.ijg.org/files/jpegsrc.v{{ version }}.tar.gz
-  md5: 6a9996ce116ec5c52b4870dbcd6d3ddb
+  md5: 0bffd02d6c6975267e23791b1cca5f62
   patches:
     - CMakeLists.txt.patch  # [win]
 
@@ -21,6 +21,7 @@ requirements:
   build:
     - cmake-binary  # [win]
     - {{ compiler('c') }}
+    - make  # [unix]
 
 test:
   files:
