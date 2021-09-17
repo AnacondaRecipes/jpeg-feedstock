@@ -19,9 +19,11 @@ build:
 
 requirements:
   build:
-    - cmake-binary  # [win]
+    - cmake         # [win]
     - {{ compiler('c') }}
     - libtool       # [unix]
+    - make          # [unix]
+    - m2-patch      # [win]
 test:
   files:
     - testorig.jpg
@@ -38,3 +40,4 @@ extra:
     - gillins
     - jakirkham
     - msarahan
+    - katietz
