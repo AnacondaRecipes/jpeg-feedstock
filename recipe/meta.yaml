@@ -1,12 +1,12 @@
-{% set version = "9d" %}
+{% set version = "9e" %}
 
 package:
   name: jpeg
   version: {{ version }}
 
 source:
-  url: http://www.ijg.org/files/jpegsrc.v{{ version }}.tar.gz
-  md5: ad7e40dedc268f97c44e7ee3cd54548a
+  url: https://www.ijg.org/files/jpegsrc.v{{ version }}.tar.gz
+  sha256: 4077d6a6a75aeb01884f708919d25934c93305e49f7e3f36db9129320e6f4f3d
   patches:
     - CMakeLists.txt.patch  # [win]
 
@@ -31,9 +31,13 @@ test:
     - djpeg -dct int -ppm -outfile testout.ppm testorig.jpg
 
 about:
-  home: http://www.ijg.org/
-  license: Custom free software license
+  home: https://www.ijg.org/
+  license: IJG
+  license_file: README
+  license_family: Other
   summary: read/write jpeg COM, EXIF, IPTC medata
+  doc_url: https://www.ijg.org/files/
+  dev_url: https://www.ijg.org/files/
     
 extra:    
   recipe-maintainers:
