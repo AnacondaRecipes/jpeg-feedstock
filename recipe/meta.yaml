@@ -36,6 +36,11 @@ about:
   license_file: README
   license_family: Other
   summary: read/write jpeg COM, EXIF, IPTC medata
+  description: |
+    This software library is the basis for the processing of images in the
+    ubiquitous JPEG format and is used worldwide in a countless number of
+    applications of software vendors and in the photographic industry under
+    a fee-free license with open source code.
   doc_url: https://www.ijg.org/files/
   dev_url: https://www.ijg.org/files/
     
