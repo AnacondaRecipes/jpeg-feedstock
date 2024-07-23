@@ -35,9 +35,11 @@ test:
     - if not exist %PREFIX%/Library/lib/jpeg-static.lib exit 1  # [win]
     - if not exist %PREFIX%/Library/include/jpeglib.h exit 1  # [win]
     - test -f ${PREFIX}/lib/pkgconfig/libjpeg.pc  # [unix]
-    - test -f ${PREFIX}/lib/libjpeg.so  # [unix]
-    - test -f ${PREFIX}/lib/libjpeg.so.9  # [unix]
-    - test -f ${PREFIX}/lib/libjpeg.so.9.5.0  # [unix]
+    - test -f ${PREFIX}/lib/libjpeg.so  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.so.9  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.so.9.5.0  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.9.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libjpeg.dylib  # [osx]
     - test -f ${PREFIX}/include/jpeglib.h  # [unix]
 
 about:
