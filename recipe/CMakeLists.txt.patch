@@ -37,9 +37,9 @@
 +add_executable (wrjpgcom wrjpgcom.c)
 +target_link_libraries (wrjpgcom libjpeg)
 +
-+add_library(jpeg STATIC ${JPEG_SRC})
++add_library(jpeg-static STATIC ${JPEG_SRC})
 +
-+install(TARGETS libjpeg cjpeg djpeg jpegtran rdjpgcom wrjpgcom jpeg
++install(TARGETS libjpeg cjpeg djpeg jpegtran rdjpgcom wrjpgcom jpeg-static
 +  RUNTIME DESTINATION bin
 +  LIBRARY DESTINATION lib
 +  ARCHIVE DESTINATION lib)

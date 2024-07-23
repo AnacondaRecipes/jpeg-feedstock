@@ -11,7 +11,7 @@ source:
     - CMakeLists.txt.patch  # [win]
 
 build:
-  number: 1
+  number: 2
   run_exports:
     # compatible within major version numbers
     # https://abi-laboratory.pro/tracker/timeline/libjpeg/
@@ -30,7 +30,17 @@ test:
   commands:
     - djpeg -dct int -ppm -outfile testout.ppm testorig.jpg
     - if not exist %PREFIX%/Library/lib/pkgconfig/libjpeg.pc exit 1  # [win]
+    - if not exist %PREFIX%/Library/bin/libjpeg.dll exit 1  # [win]
+    - if not exist %PREFIX%/Library/lib/libjpeg.lib exit 1  # [win]
+    - if not exist %PREFIX%/Library/lib/jpeg-static.lib exit 1  # [win]
+    - if not exist %PREFIX%/Library/include/jpeglib.h exit 1  # [win]
     - test -f ${PREFIX}/lib/pkgconfig/libjpeg.pc  # [unix]
+    - test -f ${PREFIX}/lib/libjpeg.so  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.so.9  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.so.9.5.0  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.9.dylib  # [osx]
+    - test -f ${PREFIX}/lib/libjpeg.dylib  # [osx]
+    - test -f ${PREFIX}/include/jpeglib.h  # [unix]
 
 about:
   home: https://www.ijg.org/
