@@ -18,4 +18,11 @@ cmake -G "NMake Makefiles"                     ^
 if errorlevel 1 exit /b 1
 cmake --build . --config Release --target INSTALL -- VERBOSE=1
 if errorlevel 1 exit /b 1
+
+REM This allows consuming build systems to use the -ljpeg option,
+REM which is also specified in the .pc file.
+REM the .dll remains called libjpeg.dll to ensure previously-built
+REM downstream packages don't fail at runtime.
+copy %PREFIX%\Library\lib\libjpeg.lib %PREFIX%\Library\lib\jpeg.lib
+
 popd
