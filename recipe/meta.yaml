@@ -23,8 +23,6 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - libtool       # [unix]
-    - make          # [unix]
-    - m2-patch      # [win]
 test:
   files:
     - testorig.jpg
