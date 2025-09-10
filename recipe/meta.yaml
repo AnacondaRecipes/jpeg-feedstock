@@ -38,7 +38,7 @@ test:
     - test -f ${PREFIX}/lib/pkgconfig/libjpeg.pc  # [unix]
     - test -f ${PREFIX}/lib/libjpeg.so  # [linux]
     - test -f ${PREFIX}/lib/libjpeg.so.9  # [linux]
-    - test -f ${PREFIX}/lib/libjpeg.so.9.5.0  # [linux]
+    - test -f ${PREFIX}/lib/libjpeg.so.9.6.0  # [linux]
     - test -f ${PREFIX}/lib/libjpeg.9.dylib  # [osx]
     - test -f ${PREFIX}/lib/libjpeg.dylib  # [osx]
     - test -f ${PREFIX}/include/jpeglib.h  # [unix]
