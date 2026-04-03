@@ -1,0 +1,5 @@
+anaconda_config_version: 1
+upstream_sources:
+  - webpage:
+      url: http://jpegclub.org/reference/wp-content/uploads/2022/01/jpegsrc.v{}.tar.gz
+      regex: jpegsrc.v([\d.]+)\.tar\.gz
