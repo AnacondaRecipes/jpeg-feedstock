@@ -1,7 +1,8 @@
+{% set name = "jpeg" %}
 {% set version = "9f" %}
 
 package:
-  name: jpeg
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -11,7 +12,7 @@ source:
     - CMakeLists.txt.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # compatible within major version numbers
     # https://abi-laboratory.pro/tracker/timeline/libjpeg/
@@ -19,9 +20,9 @@ build:
 
 requirements:
   build:
-    - cmake         # [win]
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
+    - cmake         # [win]
     - libtool       # [unix]
 test:
   files:
@@ -43,7 +44,7 @@ test:
     - test -f ${PREFIX}/include/jpeglib.h  # [unix]
 
 about:
-  home: https://www.ijg.org/
+  home: https://www.ijg.org
   license: IJG
   license_file: README
   license_family: Other
@@ -53,8 +54,8 @@ about:
     ubiquitous JPEG format and is used worldwide in a countless number of
     applications of software vendors and in the photographic industry under
     a fee-free license with open source code.
-  doc_url: https://www.ijg.org/files/
-  dev_url: https://www.ijg.org/files/
+  doc_url: https://www.ijg.org/files
+  dev_url: https://www.ijg.org/files
     
 extra:    
   recipe-maintainers:
